@@ -27,7 +27,8 @@
     <section class="emergency-report">
         <h2>Report an emergency</h2>
 
-        <form action="" method="post">
+        <form action="{{action('HeroController@store', 'hero_slug')}}" method="post">
+        <?= csrf_field() ?>
 
             <input type="text" name="subject" placeholder="Cause of emergency">
 
